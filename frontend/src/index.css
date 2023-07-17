@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-primary font-segoeui bg-[#F5F5F5];
+  }
+  h1 {
+    @apply text-2xl font-bold font-poppins;
+  }
+  h2 {
+    @apply text-xl font-bold font-poppins;
+  }
+  h3 {
+    @apply text-lg font-bold font-poppins;
+  }
+  h6 {
+    @apply font-bold font-poppins;
+  }
+}
+
+@layer components {
+  .btn-red {
+    @apply bg-redjp text-white font-semibold rounded;
+  }
+  .btn-secondary {
+    @apply bg-gray-200 text-primary font-semibold rounded;
+  }
+  .btn-blue {
+    @apply flex bg-blue-500 text-white font-semibold rounded mx-1;
+  }
+  .btn-green {
+    @apply flex bg-green-600 text-white font-semibold rounded mx-1;
+  }
+  .badge-green {
+    @apply text-green-800 bg-green-400 font-semibold rounded-lg px-2.5 pt-0.5 pb-1;
+  }
+  .badge-yellow {
+    @apply text-yellow-800 bg-yellow-400  font-semibold rounded-lg px-2.5 pt-0.5 pb-1;
+  }
+  .badge-blue {
+    @apply text-blue-600 bg-blue-200 font-semibold rounded-lg px-2.5 pt-0.5 pb-1;
+  }
+  .badge-gray {
+    @apply text-gray-700 bg-gray-200 font-semibold rounded-lg px-2.5 pt-0.5 pb-1;
+  }
+  .nav-link {
+    @apply flex items-center py-3 px-3 text-sm;
+  }
+  .table-cell {
+    @apply px-2 py-1 text-sm text-gray-700 whitespace-nowrap;
+  }
+  .card {
+    @apply bg-white w-full p-3 my-4 rounded;
+  }
+  .input-text {
+    @apply w-full h-10 px-2 mt-2 border rounded;
+  }
+  .checkbox {
+    @apply flex items-center;
+  }
+  .input-checkbox {
+    @apply w-4 h-4 mr-1;
+  }
+}

@@ -1,0 +1,154 @@
+GET http://localhost:5000/admin/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQxM2Q2NWIzM2RmYmVmNDMxMTEyYTIiLCJuYW1hIjoiR2FtYSBLdXN1bWFoIiwiZW1haWwiOiJnYW1ha3VzdW1haEBnbWFpbC5jb20iLCJub21vckhQIjoiMDgxMjIxODUzMzIyNSIsImthbnRvciI6IkhPTUUiLCJsZXZlbCI6Ik1hc3RlciIsImlhdCI6MTY4MTk5ODMxMywiZXhwIjoxNjgxOTk4MzI4fQ.2dR3SGpOgqTvJ4WZQCKVr_aqtQH_phCjodQihIMCqKk
+###
+POST http://localhost:5000/admin/tambah
+Content-Type: application/json
+
+{
+    "nama" : "Kemal",
+    "email" : "kemal@gmail.com",
+    "nomorHP" : "0812345678",
+    "password" : "123456",
+    "confPassword" : "123456",
+    "kantor" : "SR",
+    "level" : "basic"
+}
+
+###
+POST http://localhost:5000/masuk
+Content-Type: application/json
+
+{
+    "email" : "gamakusumah@gmail.com",
+    "password" : "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/keluar
+
+###
+PATCH  http://localhost:5000/kendaraan/edit/6436b041a9de98af9df6d01a
+Content-Type: application/json
+
+{
+    "noPol" : "Z 435 GSA",
+    "tglPajak" : "17/7/2023",
+    "tglSTNK" : "17/7/2024"
+}
+
+
+###
+DELETE http://localhost:5000/kendaraan/6436b041a9de98af9df6d01a
+
+###
+GET http://localhost:5000/transaksi/64252e34004a8ae86d79fe89
+
+###
+POST http://localhost:5000/transaksi/tambah
+Content-Type: application/json
+
+{
+    "noBon" : "245",
+    "wp.nama" : "Gama",
+    "wp.noHP" : "085173220201",
+    "wp.alamat" : "Jl. H. Naweng No. 42 RT03/RW07",
+    "noPol.nomor" : "D 2218 ZDM",
+    "noPol.tglPajak" : "2023-09-24",
+    "noPol.tglSTNK" : "2024-09-24",
+    "layanan" : "Perpanjang Pajak 1 Tahun",
+    "area" : "Kab. Bandung",
+    "persyaratan" : ["FC STNK, FC KTP"],
+    "kantor" : "HOME",
+    "berkas" : "Ada",
+    "harga.jasa" : 80000,
+    "harga.pajak" : 210000,
+    "harga.total" : 2190000,
+    "status" : "Sedang Diproses",
+    "pembayaran" : [{"jumlah" : 150000, "metode" : "Tunai"}, {"jumlah" : 50000, "metode" : "Tunai"}]
+}
+
+###
+PATCH  http://localhost:5000/transaksi/edit/64255be567cdd0d697b3200b
+Content-Type: application/json
+
+{"noBon" : "A12345",
+    "catatan" : "Noted"
+}
+
+###
+DELETE http://localhost:5000/transaksi/6425256b79d875add78bc6c2
+###
+PATCH http://localhost:5000/transaksi/edit/64214d0ad40a795769c4a04b
+Content-Type: application/json
+
+{
+    "noBon": "B054321",
+    "tanggalTransaksi" : "12/5/2022",
+    "idWp" : "123",
+    "noPol": "D 3321 ZXY",
+    "idLayanan" : "a1",
+    "idArea" : "KBB",
+    "hargaJasa" : "80000",
+    "hargaPajak" : "300000",
+    "hargaTotal" : "380000",
+    "statusTransaksi" : "Selesai",
+    "keteranganTransaksi" : "Noted"
+}
+
+###
+DELETE http://localhost:5000/transaksi/64214d0ad40a795769c4a04b
+
+###
+PATCH http://localhost:5000/admin/641e7d33ca2614e961f2cc29
+Content-Type: application/json
+
+{
+    "nama" : "Saya",
+    "email" : "sayakusumah@gmail.com",
+    "nomorHP" : "08123456789",
+    "kantor" : "SR",
+    "statusAdmin" : "Basic",
+    "tanggalTerdaftar" : "21/10/22"
+}
+
+###
+DELETE http://localhost:5000/admin/641e7d33ca2614e961f2cc29
+
+###
+GET http://localhost:5000/wp
+
+###
+GET http://localhost:5000/wp
+
+###
+GET http://localhost:5000/wp/641fe4b2af5a037f1b440d9b
+
+###
+POST http://localhost:5000/wp
+Content-Type: application/json
+
+{
+    "nama": "Kemal",
+    "nomorHP": "0897856312",
+    "alamat": "cilebak",
+    "kantor": "SR",
+    "tanggalTerdaftar": "7/8/20"
+}
+
+###
+PATCH http://localhost:5000/wp/641fe4b2af5a037f1b440d9b
+Content-Type: application/json
+
+{
+    "nama": "Heru",
+    "nomorHP": "0897857317",
+    "alamat": "nusa",
+    "kantor": "BE",
+    "tanggalTerdaftar": "7/9/20"
+}
+
+###
+DELETE http://localhost:5000/wp/641fe4b2af5a037f1b440d9b
