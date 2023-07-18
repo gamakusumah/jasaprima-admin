@@ -28,7 +28,7 @@ db.once("open", () => console.log("Database Connected"));
 app.use(
   cors({
     credentials: true,
-    origin: "https://jasaprima-admin.vercel.app",
+    origin: "https://jasaprima-admin-api.vercel.app/",
     methods: ["POST", "GET"],
   })
 );

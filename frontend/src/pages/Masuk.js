@@ -11,7 +11,7 @@ const Masuk = () => {
   const Auth = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/masuk", {
+      await axios.post("https://jasaprima-admin-api.vercel.app/masuk", {
         email,
         password,
       });
