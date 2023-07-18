@@ -15,7 +15,7 @@ const Masuk = () => {
         email,
         password,
       });
-      navigate("/dashboard");
+      navigate("/admin");
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
