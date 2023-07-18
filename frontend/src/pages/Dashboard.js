@@ -13,7 +13,7 @@ export function Dashboard(props) {
 
   const getTransaksi = async (req, res) => {
     const response = await props.axiosJWT.get(
-      "http://localhost:5000/transaksi-group",
+      "https://jasaprima-admin-api.vercel.app/transaksi-group",
       {
         headers: {
           Authorization: `JWT ${props.token}`,
