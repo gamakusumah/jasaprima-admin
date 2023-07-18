@@ -37,7 +37,7 @@ function App() {
 
   const refreshToken = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/token");
+      const response = await axios.get("https://jasaprima-admin-api.vercel.app/token");
       setToken(response.data.accessToken);
       const decode = jwt_decode(response.data.accessToken);
       setExpired(decode.exp);
