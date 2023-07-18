@@ -16,7 +16,7 @@ router.get("/transaksi/:id", verifyToken, getTransaksiById);
 router.post("/transaksi/tambah", saveTransaksi);
 router.patch("/transaksi/edit/:id", updateTransaksi);
 router.delete("/transaksi/:id", deleteTransaksi);
-router.get("/transaksi-group", getTunggakan);
+router.get("/transaksi-group", getTunggakan, verifyToken);
 router.get("/transaksi-filter", verifyToken, filterTransaksi);
 
 export default router;
