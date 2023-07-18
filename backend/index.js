@@ -29,7 +29,6 @@ app.use(
   cors({
     credentials: true,
     origin: "https://jasaprima-admin.vercel.app",
-    methods: ["POST", "GET"],
   })
 );
 app.use(express.json());
