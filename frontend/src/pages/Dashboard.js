@@ -16,7 +16,7 @@ export function Dashboard(props) {
       "http://localhost:5000/transaksi-group",
       {
         headers: {
-          Authorization: `Bearer ${props.token}`,
+          Authorization: `JWT ${props.token}`,
         },
       }
     );
