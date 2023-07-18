@@ -19,7 +19,6 @@ const Masuk = () => {
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);
-        console.log(email, password);
       }
     }
   };
