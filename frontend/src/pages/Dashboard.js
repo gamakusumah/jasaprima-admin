@@ -16,7 +16,7 @@ export function Dashboard(props) {
       "https://jasaprima-admin-api.vercel.app/transaksi-group",
       {
         headers: {
-          Authorization: `JWT ${props.token}`,
+          Authorization: `Bearer ${props.token}`,
         },
       }
     );
