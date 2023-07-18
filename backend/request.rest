@@ -1,27 +1,40 @@
 GET http://localhost:5000/admin/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQxM2Q2NWIzM2RmYmVmNDMxMTEyYTIiLCJuYW1hIjoiR2FtYSBLdXN1bWFoIiwiZW1haWwiOiJnYW1ha3VzdW1haEBnbWFpbC5jb20iLCJub21vckhQIjoiMDgxMjIxODUzMzIyNSIsImthbnRvciI6IkhPTUUiLCJsZXZlbCI6Ik1hc3RlciIsImlhdCI6MTY4MTk5ODMxMywiZXhwIjoxNjgxOTk4MzI4fQ.2dR3SGpOgqTvJ4WZQCKVr_aqtQH_phCjodQihIMCqKk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGI2MjIxMzRhOGFkOTYwNWIzNGZiOTYiLCJuYW1hIjoiR2FtYSBLdXN1bWFoIiwiZW1haWwiOiJnYW1ha3VzdW1haEBnbWFpbC5jb20iLCJrYW50b3IiOiJTUiIsImxldmVsIjoiZGV2IiwiaWF0IjoxNjg5NjYwODc1LCJleHAiOjE2ODk2NjA4OTV9.OCITFa78nZLn0WK0JhLINgjf6eoS7kDjbVa-EC4FxdI
+
 ###
-POST http://localhost:5000/admin/tambah
+GET https://jasaprima-admin-api.vercel.app/
+
+###
+POST https://jasaprima-admin-api.vercel.app/admin/tambah
 Content-Type: application/json
 
 {
-    "nama" : "Kemal",
-    "email" : "kemal@gmail.com",
-    "nomorHP" : "0812345678",
-    "password" : "123456",
-    "confPassword" : "123456",
+    "nama" : "Gama Kusumah",
+    "email" : "gamakusumah3@gmail.com",
+    "nomorHP" : "0822222222",
+    "password" : "12345678",
+    "confPassword" : "12345678",
     "kantor" : "SR",
-    "level" : "basic"
+    "level" : "dev"
 }
 
 ###
-POST http://localhost:5000/masuk
+POST https://jasaprima-admin-api.vercel.app/masuk
 Content-Type: application/json
 
 {
-    "email" : "gamakusumah@gmail.com",
-    "password" : "123456"
+    "email" : "gamakusumah2@gmail.com",
+    "password" : "12345678"
 }
+
+###
+PATCH  http://localhost:5000/kendaraan/edit/6436b041a9de98af9df6d01a
+Content-Type: application/json
+
+{
+    "password" : "12345678"
+}
+
 
 ###
 GET http://localhost:5000/token
