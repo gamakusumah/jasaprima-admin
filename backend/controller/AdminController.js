@@ -107,7 +107,11 @@ export const Masuk = async (req, res) => {
     });
     res.json({ accessToken });
   } catch (error) {
-    res.status(404).json({ msg: "Akun tidak terdaftar!" });
+    res
+      .status(404)
+      .json({
+        msg: `Akun tidak terdaftar!${(req.body.email, req.body.password)} `,
+      });
   }
 };
 
