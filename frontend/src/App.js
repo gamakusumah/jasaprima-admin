@@ -43,7 +43,7 @@ function App() {
       setExpired(decode.exp);
     } catch (error) {
       if (error.response) {
-        navigate("/");
+        console.log(error)
       }
     }
   };
